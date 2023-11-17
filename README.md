@@ -1,9 +1,10 @@
 # Learning Flask.
 
-This repo was created to document the steps followed in the flask tutorial.
-The objective is to create a first flask-app and then a first flask-api or microservice.
+This repo was created to be a tutorial that documents the steps followed in the  development of a first flask-app, flask-api or flask-microservice.
+By the creation of the repo Flask version is 3.0.0. We are going to be following [Official Flask documentation](https://flask.palletsprojects.com/en/3.0.x/)
+for this version of the package.
 
-[Flask official documentation](https://flask.palletsprojects.com/en/3.0.x/)
+Flask is 
 
 #### Steps to install flask in windows.
 ---
