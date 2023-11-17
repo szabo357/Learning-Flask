@@ -32,9 +32,12 @@ def create_app(test_config=None):
     from . import db
     db.init_app(app)
 
-    # register the authentication blueprint
+    # register the authentication 
+    # and blog blueprints
     from . import auth
+    from . import blog
+    
     app.register_blueprint(auth.bp)
-
+    app.register_blueprint(blog.bp)
 
     return app 
