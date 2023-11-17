@@ -9,7 +9,7 @@ The objective is to create a first flask-app and then a first flask-api or micro
 ---
 1-Create a virtual environment
 
-    -Create a project folder and a .venv folder within:
+-Create a project folder and a .venv folder within:
 
 ```shell
 > mkdir myproject
@@ -19,7 +19,7 @@ The objective is to create a first flask-app and then a first flask-api or micro
 
 2- Activate the environment 
     
-    -Before you work on your project, activate the corresponding environment:
+-Before you work on your project, activate the corresponding environment:
 
 ```shell
 > .venv\Scripts\activate
@@ -30,7 +30,7 @@ Note:if you are using visual studio code editor you may follow this [tutorial](h
 
 3- Install Flask using pip
     
-    -Within the activated environment, use the following command to install Flask:
+-Within the activated environment, use the following command to install Flask:
 
 ```shell
 > python -m pip install flask
