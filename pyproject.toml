@@ -8,4 +8,4 @@ dependencies = [
 
 [build-system]
 requires = ["flit-core<4"]
-build-backend = "flit_core.build.api"
+build-backend = "flit_core.buildapi"
