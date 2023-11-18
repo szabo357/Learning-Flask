@@ -63,3 +63,5 @@ To run the application, use the flask command:
 ```shell
 python -m pip install flask
 ```
+
+#### Beginning of the Tutorial.
