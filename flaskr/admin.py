@@ -25,9 +25,9 @@ def index():
     # print(f"totallikes= {total_likes[0]} , length: {len(total_likes)}")
 
     return render_template('admin/index.html',
-                           userscount=userscount[0],
-                           postcount=postcount[0],
-                           totallikes=total_likes[0])
+                           userscount=userscount,
+                           postcount=postcount,
+                           totallikes=total_likes)
 
 
 def get_user_count():
@@ -37,7 +37,7 @@ def get_user_count():
         "SELECT COUNT(*) FROM user"
     ).fetchone()
     
-    return usercount
+    return usercount[0]
 
 
 def get_post_count():
@@ -47,7 +47,7 @@ def get_post_count():
         "SELECT COUNT(*) FROM post"
     ).fetchone()
     
-    return postcount
+    return postcount[0]
 
 
 def get_total_likes():
@@ -57,7 +57,7 @@ def get_total_likes():
         "SELECT SUM(likes) FROM post"
     ).fetchone()
 
-    return likes
+    return likes[0]
 
 
 def get_post(id, check_author=True):
