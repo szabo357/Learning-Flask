@@ -23,7 +23,7 @@
       <hr> 
       <p class="body"> 
         likes: {{ post['likes'] }} logged: {{ g.user['logged'] }}
-        {% if g.user['logged'] == True  %}
+        {% if g.user['logged'] == "True" %}
           <a class="action" href="{{ url_for('blog.like', id=post['id']) }}">Like</a>
         {% endif %}
       </p>
