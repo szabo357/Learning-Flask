@@ -20,6 +20,9 @@ def index():
     userscount = get_user_count()
     postcount = get_post_count()
     total_likes = get_total_likes()
+    print(f"userscount= {userscount[0]} , length: {len(userscount)}")
+    print(f"postcount= {postcount[0]} , length: {len(postcount)}")
+    print(f"totallikes= {total_likes[0]} , length: {len(total_likes)}")
 
     return render_template('admin/index.html',
                            userscount=userscount,
