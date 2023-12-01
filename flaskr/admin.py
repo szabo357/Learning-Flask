@@ -17,13 +17,11 @@ bp = Blueprint("admin",__name__)
 @login_required
 def index():
     """Show all the posts, most recent first."""
+  
     userscount = get_user_count()
     postcount = get_post_count()
     total_likes = get_total_likes()
-    users = get_users()
-    # print(f"userscount= {userscount[0]} , length: {len(userscount)}")
-    # print(f"postcount= {postcount[0]} , length: {len(postcount)}")
-    # print(f"totallikes= {total_likes[0]} , length: {len(total_likes)}")
+    users = get_usernames()
 
     return render_template('admin/index.html',
                            userscount=userscount,
@@ -61,11 +59,12 @@ def get_total_likes():
 
     return likes[0]
 
-def get_users():
+
+def get_usernames():
     """Get Users list """
     db = get_db()
     users = db.execute(
-        "SELECT id, username FROM user ORDER BY id ASC"
+        "SELECT username FROM user ORDER BY id ASC"
     ).fetchall()
 
     return users
