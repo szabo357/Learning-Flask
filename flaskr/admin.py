@@ -24,8 +24,17 @@ def index():
         " ORDER BY created DESC"     
     ).fetchall()
 
-     
-    return render_template('blog/index.html',posts=posts)
+    return render_template('admin/index.html',posts=posts)
+
+
+def get_usercount():
+    """ Returns the count of users registered in app"""
+    db = get_db()
+    usercount = db.execute(
+        "SELECT COUNT(*) FROM user"
+    ).fetchone()
+    
+    return usercount
 
 
 def get_post(id, check_author=True):
