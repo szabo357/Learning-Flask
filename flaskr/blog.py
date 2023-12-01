@@ -74,8 +74,8 @@ def create():
 def like(id):
 
     print("request method is:", request.method)
-    
-    if request.method == 'POST':
+
+    if request.method == 'GET':
         error = None
         post = get_post(id)
         
