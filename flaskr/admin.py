@@ -27,7 +27,7 @@ def index():
     return render_template('admin/index.html',posts=posts)
 
 
-def get_usercount():
+def get_user_count():
     """ Returns the count of users registered in app"""
     db = get_db()
     usercount = db.execute(
@@ -37,7 +37,7 @@ def get_usercount():
     return usercount
 
 
-def get_postcount():
+def get_post_count():
     """ Returns the count of posts in app"""
     db = get_db()
     postcount = db.execute(
@@ -46,6 +46,15 @@ def get_postcount():
     
     return postcount
 
+
+def get_total_likes():
+    """ Returns the sum of likes in posts"""
+    db = get_db()
+    likes = db.execute(
+        "SELECT SUM(likes) FROM post"
+    ).fetchone()
+
+    return likes
 
 
 def get_post(id, check_author=True):
