@@ -37,6 +37,17 @@ def get_usercount():
     return usercount
 
 
+def get_postcount():
+    """ Returns the count of posts in app"""
+    db = get_db()
+    postcount = db.execute(
+        "SELECT COUNT(*) FROM post"
+    ).fetchone()
+    
+    return postcount
+
+
+
 def get_post(id, check_author=True):
 
     post = get_db().execute(
