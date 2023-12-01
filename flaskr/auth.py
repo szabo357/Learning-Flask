@@ -33,6 +33,7 @@ def load_logged_in_user():
             get_db().execute('SELECT * FROM user WHERE id = ?',(user_id,)).fetchone()
         )
 
+
 @bp.route('/register',methods=('GET','POST'))
 def register():
     """Register a new user.

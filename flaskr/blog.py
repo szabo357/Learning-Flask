@@ -69,15 +69,16 @@ def create():
     return render_template('blog/create.html')
 
 
-@bp.route('/<int:id>/like', methods=('GET','POST'))
+@bp.route('/<int:id>/like', methods=('GET',))
 @login_required
 def like(id):
 
-    print("request method is:", request.method)
 
     if request.method == 'GET':
         error = None
-        post = get_post(id)
+        # check_author flag was set to False to permit
+        # that every logged in user can like a post.
+        post = get_post(id, check_author=False)
         
         if not post:
             error = 'Post id is not valid'
