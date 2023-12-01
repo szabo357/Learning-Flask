@@ -20,13 +20,13 @@
         {% endif %}
       </header>
       <p class="body">{{ post['body'] }}</p>
-      <hr> 
-      <p class="body"> 
-        <strong>Likes: {{ post['likes'] }} </strong>  
+      <hr>
+      <footer>
+        <strong>Likes: {{ post['likes'] }} </strong>
         {% if g.user  %}
           <a class="action" href="{{ url_for('blog.like', id=post['id']) }}">Like</a>
         {% endif %}
-      </p>
+      </footer> 
     </article>
     {% if not loop.last %}
       <hr>
