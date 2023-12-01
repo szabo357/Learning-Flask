@@ -181,7 +181,7 @@ cython_debug/
 
 # Custom
 pruebas.py
-
+notas.txt
 
 .vscode
 # PyCharm
