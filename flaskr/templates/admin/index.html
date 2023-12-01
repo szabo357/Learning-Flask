@@ -15,9 +15,8 @@
   <hr>
   <div class="body">
     <ol>
-      
     {%for user in users %}
-      <li>{{ user['id']  user['username']}} </li>
+      <li>{{ user['id'] }} <strong>{{user['username']}}</strong></li>
     {% endfor %}
     </ol>
   </div>
