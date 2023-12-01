@@ -14,9 +14,11 @@
   </div>
   <hr>
   <div class="body">
+    <h4>Registered Users</h4>
+    <hr>
     <ol>
     {%for user in users %}
-      <li><strong>{{user['username']}}</strong></li>
+      <li><strong>{{ user['username'] }}</strong></li>
     {% endfor %}
     </ol>
   </div>
