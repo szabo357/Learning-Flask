@@ -64,7 +64,7 @@ def get_total_likes():
 def get_users():
     db = get_db()
     users = db.execute(
-        "SELECT id, username FROM user"
+        "SELECT id, username FROM user ORDER ASC"
     ).fetchall()
 
     return users
