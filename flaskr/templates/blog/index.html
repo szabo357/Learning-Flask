@@ -23,7 +23,9 @@
       <hr> 
       <p class="body"> 
         <h5 class ="likes">likes: {{ post['likes'] }}</h5>
-        <a class="action" href="{{ url_for('blog.like', id=post['id']) }}">Like</a>
+        {% if g.user %}
+          <a class="action" href="{{ url_for('blog.like', id=post['id']) }}">Like</a>
+        {% endif %}
       </p>
     </article>
     {% if not loop.last %}
