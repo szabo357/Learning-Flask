@@ -70,7 +70,7 @@ def create():
 
 
 @bp.route('/<int:id>/like', methods=('GET','POST'))
-#@login_required
+@login_required
 def like(id):
 
     print("request method is:", request.method)
