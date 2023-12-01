@@ -12,6 +12,15 @@
     <p>Posts in Blog: <strong> {{ postcount }}</strong></p>
     <p>Total of likes: <strong> {{ totallikes }}</strong></p>
   </div>
+  <hr>
+  <div class="body">
+    <ol>
+      
+    {%for user in users %}
+      <li>{{ user['id']  user['username']}} </li>
+    {% endfor %}
+    </ol>
+  </div>
 {% endblock %}
 
 <!--{# {% block content %}
