@@ -69,7 +69,6 @@ def register():
     return render_template('auth/register.html')                
 
 
-
 @bp.route('/login', methods=('GET','POST'))
 def login():
     if request.method == 'POST':
@@ -95,6 +94,7 @@ def login():
         flash(error)
     
     return render_template('auth/login.html')   
+
 
 @bp.route('/logout')
 def logout():
